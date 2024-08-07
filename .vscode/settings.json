@@ -1,4 +1,9 @@
 {
     "editor.fontSize": 20,
-    "python.languageServer": "Pylance"
+    "python.languageServer": "Pylance",
+    "githubPullRequests.remotes": [
+        "origin",
+        "upstream",
+        "https://github.com/mon-d-vin/P01_Course_Challenges.git"
+    ]
 }
