@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect, Http404
 from django.urls import reverse
 from django.template.loader import render_to_string
 # Create your views here.
@@ -57,4 +57,6 @@ def monthly_challenge(request, month):
             "html_h1": f"This is {month.capitalize()}'s Challenge:"
         })
     else:
-        return HttpResponseNotFound("<h1>ERROR404: THERE IS NO SUCH PAGE</h1>")
+        # web_http_response = render_to_string("404.html")
+        # return HttpResponseNotFound(web_http_response)
+        raise Http404()
